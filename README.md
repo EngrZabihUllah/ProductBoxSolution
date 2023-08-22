@@ -1,4 +1,4 @@
-# ProductBoxSolution
+# ProductBox_ExerciseSolution
 Description
 In this assignment I implemented a RESTful Web API using ASP.NET Core. 
 The API support create, read, update, and delete (CRUD) options. 
