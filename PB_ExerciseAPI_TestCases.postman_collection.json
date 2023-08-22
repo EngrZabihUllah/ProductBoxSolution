@@ -1,0 +1,78 @@
+{
+	"info": {
+		"_postman_id": "0f3f5724-ae4b-4a0b-afd5-fa1b2ac7149a",
+		"name": "PB_ExerciseAPI_TestCases",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "29228813"
+	},
+	"item": [
+		{
+			"name": "AddCustomer (CREATE)",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"Name\": \"Kamran Ali\",\r\n\"Address\": \"Warsak Road\",\r\n\"customerTypeId\": 3,\r\n\"description\": \"Customer Created via IP\",\r\n\"city\":\"Peshawar\",\r\n\"State\":\"1\",\r\n\"Zip\":\"25000\",\r\n\"LastUpdated\": \"2023-08-22T15:30:00Z\",\r\n\"CustomerType\":null\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://localhost:5001/api/customer/AddCustomer"
+			},
+			"response": []
+		},
+		{
+			"name": "GetCustomers (READ)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "https://localhost:5001/api/customer/Index"
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateCustomer (UPDATE)",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"id\": 1004,\r\n\"Name\": \"Zabih Ullah Khan\",\r\n\"Address\": \"Warsak Road Peshawar\",\r\n\"customerTypeId\": 3,\r\n\"description\": \"Customer Updated via IP\",\r\n\"city\":\"Peshawar\",\r\n\"State\":\"1\",\r\n\"Zip\":\"25000\",\r\n\"LastUpdated\":\"2023-01-01\",\r\n\"CustomerType\":null\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://localhost:5001/api/customer/1004"
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteCustomer (DELETE)",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "https://localhost:5001/api/customer/1007"
+			},
+			"response": []
+		}
+	]
+}
